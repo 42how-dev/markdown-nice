@@ -17,7 +17,6 @@ export default `/*默认样式，最佳实践*/
   font-weight: 400;
   font-family: "Helvetica Neue", PingFangSC, PingFangTC;
   word-wrap: break-word;
-  text-align: justify;
 }
 #nice.markdown-desc p {
   font-size: 14px;
