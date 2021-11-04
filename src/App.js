@@ -1,40 +1,37 @@
-import React, {Component} from "react";
 import CodeMirror from "@uiw/react-codemirror";
+import {message} from "antd";
+import "antd/dist/antd.css";
+import classnames from "classnames";
 import "codemirror/addon/search/searchcursor";
 import "codemirror/keymap/sublime";
-import "antd/dist/antd.css";
-import {observer, inject} from "mobx-react";
-import classnames from "classnames";
 import throttle from "lodash.throttle";
-
+import {inject, observer} from "mobx-react";
+import React, {Component} from "react";
+import "./App.css";
+// import EditorMenu from "./layout/EditorMenu";
+import SearchBox from "./component/SearchBox";
 import Dialog from "./layout/Dialog";
-import Navbar from "./layout/Navbar";
 import Footer from "./layout/Footer";
+import Navbar from "./layout/Navbar";
 import Sidebar from "./layout/Sidebar";
 import StyleEditor from "./layout/StyleEditor";
-import EditorMenu from "./layout/EditorMenu";
-import SearchBox from "./component/SearchBox";
-
-import "./App.css";
-import "./utils/mdMirror.css";
-
+import appContext from "./utils/appContext";
 import {
-  LAYOUT_ID,
   BOX_ID,
   IMAGE_HOSTING_NAMES,
   IMAGE_HOSTING_TYPE,
+  LAYOUT_ID,
+  MAX_MD_NUMBER,
   MJX_DATA_FORMULA,
   MJX_DATA_FORMULA_TYPE,
-  MAX_MD_NUMBER,
   THROTTLE_MATHJAX_TIME,
   THROTTLE_MD_RENDER_TIME,
 } from "./utils/constant";
 import {markdownParser, updateMathjax} from "./utils/helper";
-import pluginCenter from "./utils/pluginCenter";
-import appContext from "./utils/appContext";
-import {uploadAdaptor} from "./utils/imageHosting";
 import bindHotkeys, {betterTab, rightClick} from "./utils/hotkey";
-import {message} from "antd";
+import {uploadAdaptor} from "./utils/imageHosting";
+import "./utils/mdMirror.css";
+import pluginCenter from "./utils/pluginCenter";
 
 @inject("content")
 @inject("navbar")
@@ -398,7 +395,7 @@ class App extends Component {
               )}
 
               <Dialog />
-              <EditorMenu />
+              {/* <EditorMenu /> */}
             </div>
             <Footer />
           </div>

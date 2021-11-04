@@ -1,8 +1,7 @@
+import {Dropdown, Menu} from "antd";
+import {inject, observer} from "mobx-react";
 import React from "react";
-import {Menu, Dropdown} from "antd";
-import {observer, inject} from "mobx-react";
-
-import {CODE_OPTIONS, RIGHT_SYMBOL, IS_MAC_CODE} from "../../utils/constant";
+import {CODE_OPTIONS, IS_MAC_CODE, RIGHT_SYMBOL} from "../../utils/constant";
 import "./CodeTheme.css";
 
 @inject("navbar")
@@ -32,7 +31,7 @@ class CodeTheme extends React.Component {
     const codeMenu = (
       <Menu onClick={this.changeCodeTheme}>
         {CODE_OPTIONS.map((option, index) => (
-          <Menu.Item key={index}>
+          <Menu.Item key={`${index}-${option.id}`}>
             <div id={`nice-menu-codetheme-${option.id}`} className="nice-codetheme-item">
               <span>
                 <span className="nice-codetheme-item-flag">{codeNum === index && <span>{RIGHT_SYMBOL}</span>}</span>
