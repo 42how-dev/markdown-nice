@@ -26,7 +26,7 @@ class Content {
   @action
   setContent = (content) => {
     this.content = content;
-    window.localStorage.setItem(CONTENT, content);
+    // window.localStorage.setItem(CONTENT, content);
   };
 
   @action
