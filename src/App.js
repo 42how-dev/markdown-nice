@@ -102,6 +102,8 @@ class App extends Component {
     document.removeEventListener("webkitfullscreenchange", this.solveScreenChange);
     document.removeEventListener("mozfullscreenchange", this.solveScreenChange);
     document.removeEventListener("MSFullscreenChange", this.solveScreenChange);
+    this.props.content.setContent("");
+    this.props.onTextChange && this.props.onTextChange("");
   }
 
   setCustomImageHosting = () => {
@@ -255,7 +257,6 @@ class App extends Component {
 
   handlePaste = (instance, e) => {
     const cbData = e.clipboardData;
-
     const insertPasteContent = (cm, content) => {
       const {length} = cm.getSelections();
       cm.replaceSelections(Array(length).fill(content));
