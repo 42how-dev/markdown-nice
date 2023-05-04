@@ -50,9 +50,9 @@ class Content {
 const store = new Content();
 
 // 如果为空先把数据放进去
-if (window.localStorage.getItem(CONTENT) === null) {
-  window.localStorage.setItem(CONTENT, TEMPLATE.content);
-}
+// if (window.localStorage.getItem(CONTENT) === null) {
+//   window.localStorage.setItem(CONTENT, TEMPLATE.content);
+// }
 if (!window.localStorage.getItem(STYLE)) {
   window.localStorage.setItem(STYLE, TEMPLATE.custom);
 }
@@ -74,6 +74,7 @@ addStyleLabel(STYLE_LABELS);
 // 初始化整体主题
 replaceStyle(BASIC_THEME_ID, TEMPLATE.basic);
 
-store.content = window.localStorage.getItem(CONTENT);
+// store.content = window.localStorage.getItem(CONTENT);
+store.content = "";
 
 export default store;
