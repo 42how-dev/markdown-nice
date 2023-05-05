@@ -91,9 +91,13 @@ class App extends Component {
     this.setCustomImageHosting();
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     if (pluginCenter.mathjax) {
       this.handleUpdateMathjax();
+    }
+    const {defaultText} = this.props;
+    if (defaultText !== prevProps.defaultText) {
+      this.props.content.setContent(defaultText);
     }
   }
 
