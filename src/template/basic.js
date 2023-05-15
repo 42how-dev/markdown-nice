@@ -42,61 +42,45 @@ export default `/*默认样式，最佳实践*/
   list-style: disc;
 }
 #nice h1 {
-  color: #000;
-  text-align: center;
-  font-weight: bold;
-  font-size: 26px;
-  margin-bottom: 30px;
+    color: white !important;
+    text-align: center;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    padding: 3px 20px;
+    background-color: #152137;
+    margin-bottom: 30px;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
-#nice h1:after {
-  display: inline-block;
-  content: " ";
-  margin-left: 20px;
-  vertical-align: center;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-right: 15px solid rgba(255, 245, 0, 0.7);
-}
-#nice h1:before {
-  display: inline-block;
-  content: " ";
-  margin-right: 20px;
-  vertical-align: bottom;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-right: 15px solid rgba(0, 255, 229, 0.5);
-}
+
 #nice h2 {
-  margin: 50px 10px 40px 10px;
-  font-size: 26px;
-  text-align: center;
-  font-weight: bold;
-  color: #1d2027;
-  line-height: 2;
-  padding-bottom: 15px;
+    margin: 48px 0 8px;
+    font-size: 26px;
+    text-align: center;
+    font-weight: 600;
+    color: #152137;
+    line-height: 39px;
 }
 #nice h2 .content {
   padding: 5px 8px;
 }
-#nice h2:before {
-  counter-increment: section;
-  content: "0" counter(section);
-  display: block;
-  font-size: 50px;
-  font-weight: 200;
-  color: #0f1115;
-  margin-bottom: 0px;
-}
 #nice h3 {
-  margin: 40px 0px 20px 0px;
-  font-weight: bold;
-  font-size: 18px;
-  color: #1d2027;
-  border-left: 4px solid #00ffe5;
-  padding-left: 10px;
+    margin: 40px 0px 20px 0px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #152137;
+    border-left: 3px solid #00ffe5;
+    padding-left: 8px;
+    line-height: 28px;
 }
 #nice h4 {
-  color: #363b45;
+    font-weight: 600;
+    font-size: 16px;
+    color: #152137;
+    line-height: 24px;
 }
 #nice li section {
   color: #363b45;
